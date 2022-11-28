@@ -16,7 +16,7 @@ function generateRandomValue(min, max) {
 }
 
 function addForecast() {
-    const newForecast = forecastTemplate.content;
+    const newForecast = forecastTemplate.content.cloneNode(true);
     newForecast.querySelector('h3').textContent = forecastTitle.textContent;
     newForecast.querySelector('p').textContent = forecastChance.textContent;
     return newForecast;
